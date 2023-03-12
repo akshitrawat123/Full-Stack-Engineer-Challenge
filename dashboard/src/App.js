@@ -5,7 +5,7 @@ import FindingTable from './ScanFindingsTable.tsx';
 
 function App() {
   const routes = [
-    { path: '/', element: <ScanResultForm /> }, // First Screen
+    { path: '/', element: <ScanResultForm /> }, // First Screens
     { path: '/scan-results', element: <SecondScreen /> }, // Second Screen
     { path: '/finding-results/*', element: <FindingTable /> }, // Third Screen
   ];
