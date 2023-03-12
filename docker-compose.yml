@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+   api:
+    build: frontend/api
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://akshit:akshit@cluster0.uhcdy.mongodb.net/?retryWrites=true&w=majority
+
+  dashboard:
+    build: frontend/dashboard
+    ports:
+      - "5000:5000"
+    depends_on:
+      - api
+
